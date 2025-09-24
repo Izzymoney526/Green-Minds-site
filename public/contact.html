@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Green Minds Environmental Sustainability Foundation</title>
+  <meta name="description" content="Contact Green Minds to collaborate, ask questions, or support our sustainability mission." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="canonical" href="/contact.html" />
+  <meta property="og:title" content="Contact Green Minds" />
+  <meta property="og:description" content="Reach out to collaborate or learn more about our sustainability work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/contact.html" />
+  <meta property="og:image" content="/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Green Minds" />
+  <meta name="twitter:description" content="Reach out to collaborate or learn more about our sustainability work." />
+  <meta name="twitter:image" content="/logo.png" />
+  <link rel="stylesheet" href="site.css" />
+  <style>
+    .form-grid { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
+    @media (max-width: 640px){ .form-grid { grid-template-columns: 1fr; } }
+    .field { display:flex; flex-direction:column; gap:.35rem; }
+    .field label { font-weight: 700; color: var(--primary); }
+    .field input, .field textarea { padding:.75rem .85rem; border-radius:10px; border:1px solid var(--border); background: var(--surface); color: var(--text); }
+    .field input:focus, .field textarea:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .hint { font-size:.9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="navbar" role="banner">
+    <div class="container navbar-inner">
+      <a class="brand" href="index.html" aria-label="GreenMinds home">
+        <img src="logo.png" alt="GreenMinds Logo" />
+        <span>GreenMinds</span>
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="donate.html" class="donate-btn">Donate</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"><span data-theme-icon>☀️</span></button>
+      </nav>
+      <div class="hamburger" data-hamburger aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" data-mobile-menu id="mobileMenu" role="navigation" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="news.html">News</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="donate.html" class="donate-btn">Donate</a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"><span data-theme-icon>☀️</span></button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="fade-in" aria-labelledby="contact-hero-title">
+      <div class="container">
+        <div class="card center">
+          <h1 id="contact-hero-title" style="margin:0 0 .5rem 0; font-size:2rem; font-weight:900; color: var(--gold);">Contact Us</h1>
+          <p style="margin:0; color: var(--muted);">We'd love to hear from you. Collaborations, questions, or support—reach out below.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="fade-in" aria-labelledby="contact-form-title">
+      <div class="container">
+        <h2 class="section-title" id="contact-form-title" style="margin-bottom:1rem;">Send a Message</h2>
+        <form class="card" method="POST" action="#" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="full-name">Full Name</label>
+              <input id="full-name" name="fullName" type="text" autocomplete="name" required placeholder="Jane Doe" />
+              <span class="hint">Enter your first and last name.</span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+              <span class="hint">We’ll never share your email.</span>
+            </div>
+          </div>
+          <div class="field" style="margin-top:1rem;">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
+          </div>
+          <!-- Honeypot anti-spam -->
+          <div class="hidden" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <div style="display:flex; gap:.75rem; justify-content:flex-start; margin-top:1rem;">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <a class="btn btn-ghost" href="mailto:info@example.org">Email Us</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <h4>About GreenMinds</h4>
+        <p>GreenMinds is a youth-driven foundation committed to environmental sustainability, climate awareness, and eco-innovation. Rooted in Yabatek, growing across Nigeria.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.5rem;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">F</a>
+          <a href="#" aria-label="Instagram">I</a>
+          <a href="#" aria-label="Twitter / X">T</a>
+          <a href="#" aria-label="LinkedIn">L</a>
+          <a href="#" aria-label="YouTube">Y</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">© 2025 Green Minds Environmental Sustainability Foundation. All rights reserved.</div>
+      <div class="footer-credit"> <a href="https://wa.me/message/GFH26N2VQAKNG1" target="_blank">Created &amp; Designed by Izzy Web Solution</a></div>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>

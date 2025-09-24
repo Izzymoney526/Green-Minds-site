@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - GreenMinds Initiative</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar sticky top-0 z-50" style="background: #0A3D1A; color: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <img src="logo.png" alt="Green Minds Logo" style="height: 2.5rem; width: 2.5rem; border-radius: 1.25rem; border: 2px solid #D4AF37; box-shadow:0 2px 8px #D4AF37;">
+        <span style="font-weight: 900; font-size: 2rem; letter-spacing: 2px; color: #D4AF37; text-shadow:0 2px 8px #2E7D32;">Green Minds Initiative</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 2rem;">
+        <a href="index.html" style="color: #fff; font-weight:600;">Home</a>
+        <a href="about.html" style="color: #fff; font-weight:600;">About</a>
+        <a href="projects.html" style="color: #fff; font-weight:600;">Projects</a>
+        <a href="news.html" style="color: #fff; font-weight:600;">News</a>
+        <a href="gallery.html" style="color: #fff; font-weight:600;">Gallery</a>
+        <a href="contact.html" style="color: #D4AF37; font-weight:900;">Contact</a>
+        <a href="donate.html" class="btn btn-gold" style="background:#D4AF37; color:#2E7D32; font-weight:900; border-radius:8px; padding:0.6rem 1.2rem; box-shadow:0 2px 8px #D4AF37;">Donate</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="section fade-in" style="background: rgba(255,255,255,0.06); border-left: 4px solid #D4AF37; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 2.5rem; margin: 2rem auto; max-width: 900px;">
+    <h2 class="section-title" style="color: #2E7D32; font-size: 2.4rem; font-weight: 900; margin-bottom: 2rem;">Meet Our Team</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2rem;">
+        <div class="card" style="text-align:center; background:rgba(255,255,255,0.12); border-left:4px solid #D4AF37; box-shadow:0 4px 16px #2E7D32;">
+          <img src="profile-placeholder.png" alt="Profile" style="width:80px; border-radius:50%; margin-bottom:1rem; box-shadow:0 2px 8px #2E7D32;">
+          <h3 style="color:#2E7D32;">Team Member</h3>
+          <p style="color:#333;">Team information will be updated soon.</p>
+        </div>
+        <div class="card" style="text-align:center; background:rgba(255,255,255,0.12); border-left:4px solid #D4AF37; box-shadow:0 4px 16px #2E7D32;">
+          <img src="profile-placeholder.png" alt="Profile" style="width:80px; border-radius:50%; margin-bottom:1rem; box-shadow:0 2px 8px #2E7D32;">
+          <h3 style="color:#2E7D32;">Team Member</h3>
+          <p style="color:#333;">Team information will be updated soon.</p>
+        </div>
+        <div class="card" style="text-align:center; background:rgba(255,255,255,0.12); border-left:4px solid #D4AF37; box-shadow:0 4px 16px #2E7D32;">
+          <img src="profile-placeholder.png" alt="Profile" style="width:80px; border-radius:50%; margin-bottom:1rem; box-shadow:0 2px 8px #2E7D32;">
+          <h3 style="color:#2E7D32;">Team Member</h3>
+          <p style="color:#333;">Team information will be updated soon.</p>
+        </div>
+      </div>
+    <!-- Add more team members here as needed -->
+    </section>
+  </main>
+  <footer class="footer glass">
+    <div class="credit" style="font-weight:600; color:#D4AF37; font-size:1.1rem;">Created by IzzyWeb Solutions ✨</div>
+    <div style="margin-top:0.5rem; color:#fff; font-size:1rem; font-weight:500;">© 2025 Green Minds Foundation. All rights reserved. Made with <span style="color:#D4AF37;">&#10084;</span> in Lagos</div>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    // Global theme toggle
+    const toggleBtn = document.getElementById('darkToggle');
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+    // Initial theme
+    if (localStorage.getItem('theme') === 'dark') setTheme('dark');
+    else setTheme('light');
+    // Toggle event
+    if (toggleBtn) {
+      toggleBtn.onclick = () => {
+        setTheme(document.body.classList.contains('dark') ? 'light' : 'dark');
+      };
+    }
+  </script>
+  <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#news">News & Updates</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="donate-btn" onclick="location.href='index.html#donate'">Donate</button>
+      </nav>
+      <button id="themeToggle" aria-label="Toggle theme" style="background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border-radius:50%;border:2px solid var(--green);box-shadow:0 0 16px #2ecc7133;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;margin-left:1rem;transition:box-shadow 0.2s;">
+        <span id="themeIcon" style="font-size:1.5rem;color:var(--green);">☀️</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  <style>
+    :root {
+      --green: #2ecc71;
+      --dark: #333333;
+      --white: #ffffff;
+      --gray: #f9f9f9;
+      --footer-green: #145A32;
+      --shadow: 0 4px 24px #2ecc7133;
+      --glass-bg: rgba(255,255,255,0.85);
+      --glass-blur: blur(16px);
+    }
+    body.dark-theme {
+      --green: #00C853;
+      --dark: #F5F5F5;
+      --white: #0D0D0D;
+      --gray: #1A1A1A;
+      --footer-green: #000000;
+      --shadow: 0 4px 24px #00C85322;
+      --glass-bg: rgba(26,26,26,0.85);
+      --glass-blur: blur(16px);
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--gray);
+      color: var(--dark);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--green);
+      color: var(--white);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+    }
+    .navbar a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .navbar a:hover {
+      color: var(--green);
+    }
+    .btn-gold {
+      background: var(--green);
+      color: var(--dark);
+      font-weight: 900;
+      border-radius: 8px;
+      padding: 0.6rem 1.2rem;
+      box-shadow: 0 2px 8px var(--green);
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn-gold:hover {
+      background: var(--dark);
+      transform: translateY(-2px);
+    }
+    .section {
+      padding: 2.5rem;
+      margin: 2rem auto;
+      max-width: 900px;
+      background: var(--glass-bg);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .section-title {
+      color: var(--green);
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+    }
+    .card {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.12);
+      border-left: 4px solid var(--green);
+      box-shadow: 0 4px 16px var(--green);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+    .footer {
+      background: var(--footer-green);
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer .credit {
+      font-weight: 600;
+      color: var(--green);
+      font-size: 1.1rem;
+    }
+    .footer div {
+      margin-top: 0.5rem;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navbar a {
+        margin: 0.5rem 0;
+      }
+      .btn-gold {
+        width: 100%;
+        padding: 0.8rem;
+      }
+      .section {
+        padding: 2rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
+  <script>
+    // Navbar hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+    });
+    // Fade-in animation on section load
+    document.querySelectorAll('.fade-in').forEach(function(section, i) {
+      setTimeout(function() {
+        section.style.opacity = 1;
+        section.style.transform = 'none';
+      }, 200 + i * 200);
+    });
+    // Theme toggle logic
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+        themeIcon.textContent = '🌙';
+      } else {
+        document.body.classList.remove('dark-theme');
+        themeIcon.textContent = '☀️';
+      }
+      localStorage.setItem('gmTheme', theme);
+    }
+    themeToggle.addEventListener('click', function() {
+      const isDark = document.body.classList.contains('dark-theme');
+      setTheme(isDark ? 'light' : 'dark');
+    });
+    // On load, set theme from localStorage
+    const savedTheme = localStorage.getItem('gmTheme');
+    setTheme(savedTheme === 'dark' ? 'dark' : 'light');
+  </script>
+</body>
+</html>
